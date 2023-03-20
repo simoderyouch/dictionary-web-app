@@ -1,5 +1,10 @@
-### Dictionary Web App
-This is a web app that retrieves dictionary word definitions and displays them. The API used for this app is dictionaryapi.dev.
+# Dictionary Web App - Frontend Mentor Challenge
+
+
+
+- Live on Github Pages: https://github.com/simoderyouch/dictionary-web-app
+- Live on Netlify: https://dictionary-here.netlify.app/
+
 
 ### Features
 
