@@ -1,10 +1,9 @@
 # Dictionary Web App - Frontend Mentor Challenge
 
-
-
 - Live on Github Pages: https://github.com/simoderyouch/dictionary-web-app
 - Live on Netlify: https://dictionary-here.netlify.app/
 
+This is a solution to the [Dictionary Web App](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ### Features
 
