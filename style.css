@@ -203,7 +203,7 @@ body.dark .drop-menu ul#option {
 
 .show {
   opacity: 1 !important;
-  pointer-events: auto;
+  pointer-events: auto !important;
 }
 
 /*---------------------------------------------------------*/
