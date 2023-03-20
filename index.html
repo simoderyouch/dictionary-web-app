@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="Sans-serif">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DICTIONARY</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="./assets//images/logo.svg" alt="logo" />
+      <div class="left">
+        <div class="drop-menu">
+          <div class="drop-menu-btn"> <span>Sans-serif</span>
+            <img src="./assets//images/icon-arrow-down.svg" alt="logo" />
+          </div>
+          <ul id="option">
+            <li class="Sans-serif">Sans-serif</li>
+
+            <li class="Serif">Serif</li>
+
+            <li class="Mono">Mono</li>
+
+          </ul>
+
+        </div>
+
+        <div class="vl"></div>
+
+        <div class="switch">
+          <div class="switch-mode">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label for="checkbox" class="checkbox-label">
+              <span class="ball"></span>
+            </label>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+            <path fill="none" stroke="#838383" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <form id="search-form">
+
+      <input id="search" autocomplete="off" type="text" placeholder="Search for any word..">
+
+      <button type="submit" id="submit">
+        <img src="./assets/images/icon-search.svg" alt="">
+      </button>
+    </form>
+
+    <div class="result">
+
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>
