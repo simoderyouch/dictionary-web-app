@@ -13,7 +13,7 @@ This is a web app that retrieves dictionary word definitions and displays them. 
    - Use custom dropdown menus with appropriate ARIA usage.
 
 ### Screenshot
-Insert a screenshot of your web app here.
+![Screenshot](./screenshot.webp)
 
 ### Built With
    - dictionaryapi.dev
