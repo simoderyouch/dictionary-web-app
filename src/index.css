@@ -1,0 +1,562 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,700&display=swap');
+
+:root {
+  --black: #050505;
+  --grey1: #1f1f1f;
+  --grey2: #2d2d2d;
+  --grey3: #3a3a3a;
+  --grey4: #757575;
+  --grey5: #a3a3a3;
+  --grey6: #dddddd;
+  --white: #ffffff;
+  --purple: rgb(164, 69, 237);
+  --melon: rgb(255, 82, 82);
+
+  --text: var(--black);
+  --subText: var(--grey4);
+  --background: var(--white);
+  --searchBG: var(--grey6);
+  --borders: var(--grey6);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.Sans-serif {
+  font-family: 'inter', sans-serif !important;
+}
+
+.Serif {
+  font-family: 'Lora', serif !important;
+}
+
+.Mono {
+  font-family: 'inconsolata', monospace !important;
+}
+
+
+
+
+/*------------------------ CONTAINER----------------*/
+
+
+
+.container {
+  width: 57%;
+  margin: auto
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 80%;
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+
+  }
+}
+
+
+
+
+/*----------------------------------------*/
+
+
+/*--------------------------HEADER-------------------*/
+
+
+
+.container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.container .header .left {
+  display: flex;
+}
+
+
+
+.vl {
+  border-left: 2px solid rgb(200, 200, 200);
+  height: 22px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.left {
+  gap: 26px;
+}
+
+.drop-menu {
+
+  position: relative;
+
+  gap: 13px;
+  z-index: 1;
+
+
+}
+
+.drop-menu-btn {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 13px;
+
+  cursor: pointer;
+
+}
+
+.drop-menu img {
+  width: 16px;
+}
+
+.drop-menu span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.drop-menu ul.option {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  top: calc(100% + 20px);
+  display: flex;
+  flex-direction: column;
+
+  width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  background-color: white;
+
+}
+
+body.dark .drop-menu ul.option {
+  background-color: white;
+  color: black;
+}
+
+.drop-menu ul.option li {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.drop-menu ul.option li:hover {
+  color: var(--purple);
+}
+
+.show {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/*---------------------------------------------------------*/
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: var(--grey4);
+  width: 40px;
+  height: 19px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+  transform: translateX(19px);
+}
+
+
+/*-----------------------------------------------------*/
+
+/*------------------------------- SEARCH ------------------------------*/
+#search-form {
+  width: 100%;
+  position: relative;
+  margin-top: 35px;
+
+
+}
+
+#search-form label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 19px;
+}
+
+#search-form input[type="text"] {
+  width: 100%;
+  height: 60px;
+
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  border: 0;
+  padding-left: 20px;
+  color: var(--black);
+  font-weight: bold;
+  background-color: var(--searchBG);
+  outline: none;
+}
+
+#search-form input[type="text"]::placeholder {
+  font-size: 16px;
+  color: var(--grey3);
+  font-weight: 100;
+
+}
+
+#search-form button {
+  position: absolute;
+  right: 18px;
+  border: 0;
+  background: none;
+  top: 53%;
+  transform: translateY(-50%);
+
+}
+
+#search-form button img {
+  width: 22px;
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+.result {
+  margin-top: 39px;
+
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.result-header h1 {
+  font-size: 64px;
+}
+
+.result-header .play {
+  border: 0;
+  background: none;
+}
+
+.result-header .play img {
+  width: 64px;
+}
+
+.phonetic {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 30px;
+}
+
+.phonetic p {
+  color: var(--purple);
+  font-size: 19px;
+}
+
+.result>.br {
+  margin-top: 50px;
+}
+
+.result .meanings .partOfSpeech {
+  margin-bottom: 28px;
+}
+
+.result .meanings .partOfSpeech>div.head {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 34px;
+}
+
+.result .meanings .partOfSpeech>div.head h1 {
+  font-size: 20px;
+  position: relative;
+  margin-right: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.br {
+
+  width: 100%;
+  height: 1px;
+
+  background-color: var(--grey6);
+  top: 50%;
+}
+
+.result .meanings .partOfSpeech>h1 {
+  font-size: 17px;
+  color: var(--grey5);
+  font-weight: 100;
+
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  /* Remove default bullets */
+  margin-left: 2rem;
+}
+
+.result .meanings .partOfSpeech li {
+  font-size: 15px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.result .meanings .partOfSpeech li>p {
+  font-size: 15px;
+  display: flex; 
+  flex-direction: column;
+  color: var(--black);
+  font-weight: 100;
+}
+
+.result .meanings .partOfSpeech li p span {
+  font-size: 15px;
+  color: var(--grey5);
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+.result .meanings .partOfSpeech li::before {
+  content: "\2022";
+  color: var(--purple);
+  font-weight: bold;
+  width: 1em;
+
+
+}
+
+.synonyms h1 {
+  font-size: 17px;
+  color: var(--grey5);
+  font-weight: 100;
+}
+
+.synonyms {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+  margin-bottom: 43px;
+}
+
+.synonyms h4 {
+  color: var(--purple);
+  font-weight: bold;
+}
+
+.footerSection h1 {
+  font-size: 14px;
+  color: var(--grey5);
+  font-weight: 100;
+  margin-right: 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.footer a {
+  color: var(--grey3);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer a {
+  color: var(--grey3);
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.newWindow {
+  border: 0;
+  outline: 0;
+  background: none;
+}
+
+.newWindow img {
+  width: 17px;
+}
+
+.footerSection {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 70px;
+
+  align-items: flex-start;
+}
+
+.footer .link {
+  display: flex;
+  align-items: center;
+}
+
+body.dark {
+  color: white;
+  background-color: #050505;
+}
+
+body.dark {
+  color: white;
+  background-color: #050505;
+}
+
+body.dark .checkbox-label {
+  background-color: var(--purple);
+
+}
+
+body.dark .switch svg path {
+  stroke: var(--purple);
+
+}
+
+body.dark .result .meanings .partOfSpeech li>p {
+  font-size: 15px;
+  color: var(--white);
+  font-weight: 100;
+}
+
+body.dark #search-form input[type="text"] {
+
+  background-color: var(--grey2) !important;
+  color: var(--white) !important;
+}
+
+body.dark #search-form input[type="text"]::placeholder {
+
+  color: var(--white);
+
+
+}
+
+body.dark .footer a {
+  color: var(--grey5);
+
+}
+
+main.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+main.error img {
+  width: 330px;
+
+}
+
+main.error h5 {
+  margin: 24px 0 13px;
+  font-size: 21px;
+}
+
+main.error p {
+  line-height: 1.4;
+  width: 80%;
+}
+
+.rolling {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@keyframes ldio-rkai90ip6f {
+  0% { transform: translate(-50%,-50%) rotate(0deg); }
+  100% { transform: translate(-50%,-50%) rotate(360deg); }
+}
+.ldio-rkai90ip6f div {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 7px solid #a445ed;
+  border-top-color: transparent;
+  border-radius: 50%;
+}
+.ldio-rkai90ip6f div {
+  animation: ldio-rkai90ip6f 1s linear infinite;
+  top: 100px;
+  left: 100px
+}
+.loadingio-spinner-rolling-234cmcgj7ue {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: transparent;
+}
+.ldio-rkai90ip6f {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-rkai90ip6f div { box-sizing: content-box; }
+/* generated by https://loading.io/ */
